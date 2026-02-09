@@ -1,0 +1,212 @@
+/* ================== LAYOUT ================== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111;
+  font-weight: 600;
+}
+
+/* ================== FORM ELEMENTS ================== */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* ================== GRID ================== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* ================== BUTTONS ================== */
+button {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  background: #e5e7eb;
+  color: #111;
+}
+
+.secondary-btn:hover {
+  background: #d1d5db;
+}
+
+/* ================== TEMPLATE SELECTION ================== */
+.template-card {
+  border: 2px solid #e5e7eb;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.template-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.template-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.template-card.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+/* ================== RESUME PREVIEW ================== */
+.resume-card {
+  max-width: 950px;
+  margin: auto;
+  background: #ffffff;
+  padding: 40px;
+  font-family: "Inter", Arial, sans-serif;
+  color: #111827;
+  line-height: 1.6;
+  border-radius: 14px;
+}
+
+/* ================== HEADER ================== */
+.resume-header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid black;
+  padding: 1px;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.headline {
+  font-size: 18px;
+  color: #2563eb;
+  margin: 4px 0;
+}
+
+.contact,
+.location {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* ================== LINKS ================== */
+.links {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #2563eb;
+}
+
+/* ================== SECTIONS ================== */
+section {
+  margin-top: 26px;
+}
+
+section h3 {
+  font-size: 18px;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 4px;
+  margin-bottom: 14px;
+}
+
+.item {
+  margin-bottom: 16px;
+}
+
+.muted {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ================== ACTION ROW ================== */
+.flex {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+/* ================== PRINT MODE ================== */
+@media print {
+  body {
+    background: white;
+  }
+
+  .container {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .resume-card {
+    box-shadow: none;
+    padding: 30px;
+    border-radius: 0;
+  }
+
+  button {
+    display: none;
+  }
+}
